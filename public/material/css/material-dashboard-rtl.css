@@ -4,14 +4,29 @@
  * Material Dashboard rtl - v1.1
  =========================================================
  *
- * author: Alireza Esfahani <aynzad@gmail.com>
- * https://github.com/aynzad
- * http://gonjeshk.ir
+ * author: Meysam Afsharzade <Meysam2Fan.ir>
+ * https://github.com/meysam2fan
  *
  */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4 {
+    font-family: "IRANYekanWeb(FaNum)" !important;
+    font-weight: 300;
+    line-height: 1.5em;
+}
 html[dir="rtl"] {
   text-align: right;
   direction: rtl;
+
 }
 
 html[dir="rtl"] .nav {

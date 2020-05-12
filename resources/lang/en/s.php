@@ -14,4 +14,9 @@ return [
     */
 
     'test' => 'in test ast',
+    'title' => 'Almahdi School',
+    'news' => 'News',
+    'edu_content' => 'Educational content',
+    'service'=>'Service',
+    'login'=>'Login',
 ];
