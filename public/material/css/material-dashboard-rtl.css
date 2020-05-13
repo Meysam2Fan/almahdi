@@ -8,6 +8,12 @@
  * https://github.com/meysam2fan
  *
  */
+@font-face {
+    font-family: IRANYekan;
+    src: url("../fonts/iranyekanweblight.eot?#iefix") format("embedded-opentype"), url("../fonts/iranyekanweblight.woff") format("woff");
+    font-style: normal;
+    font-weight: 300;
+}
 body,
 h1,
 h2,
@@ -19,7 +25,7 @@ h6,
 .h2,
 .h3,
 .h4 {
-    font-family: "IRANYekanWeb(FaNum)" !important;
+    font-family: IRANYekan !important;
     font-weight: 300;
     line-height: 1.5em;
 }

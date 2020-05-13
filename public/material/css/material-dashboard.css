@@ -13353,7 +13353,6 @@ fieldset[disabled] .form-group .form-control {
   text-transform: uppercase;
   border-radius: 3px;
   color: #fff;
-  margin: 0 15px;
 }
 
 .off-canvas-sidebar .navbar .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
@@ -16282,7 +16281,7 @@ thead.thead-inverse th,
 }
 
 body {
-  background-color: #eee;
+  background-color: #fff;
   color: #3C4858;
   font-weight: 300;
 }
@@ -18087,9 +18086,6 @@ Copyright (c) 2015 Daniel Eden
   }
   .presentation-page .section-components .coloured-card-btn-img {
     top: -2%;
-  }
-  .login-page .container {
-    padding-top: 100px !important;
   }
   .presentation-page #cd-vertical-nav,
   .index-page #cd-vertical-nav,

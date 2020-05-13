@@ -19,4 +19,8 @@ return [
     'edu_content' => 'Educational content',
     'service'=>'Service',
     'login'=>'Login',
+    'text_header1' => '',
+    'text_header2' => '',
+    'text_header3' => '',
+    'text_header4' => '',
 ];

@@ -4,7 +4,7 @@
     <div class="navbar-wrapper">
       <a class="navbar-brand" href="{{ route('index') }}">
           <img width="35px" src="{{ asset('material') }}/img/logo@2x.png">
-          <span>{{ $title }}</span>
+          <span class="text-dark">{{ $title }}</span>
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
