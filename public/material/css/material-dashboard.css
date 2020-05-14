@@ -542,10 +542,6 @@ strong {
   font-weight: bolder;
 }
 
-small {
-  font-size: 80%;
-}
-
 sub,
 sup {
   position: relative;
@@ -605,7 +601,7 @@ pre {
 }
 
 figure {
-  margin: 0 0 1rem;
+  margin: 0rem;
 }
 
 img {
@@ -775,7 +771,7 @@ h6,
 .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.2;
   color: inherit;
 }
@@ -849,7 +845,7 @@ hr {
 small,
 .small {
   font-size: 80%;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 mark,
@@ -13574,12 +13570,11 @@ fieldset[disabled] .form-group .form-control {
 }
 
 .page-header {
-  min-height: 100vh;
-  max-height: 1000px;
+  /*min-height: 100vh;*/
+  /*max-height: 1000px;*/
   display: flex !important;
   height: 100%;
   padding: 0;
-  color: #fff;
   position: relative;
 }
 
@@ -14447,11 +14442,11 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   float: none;
 }
 
-.off-canvas-sidebar .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
+/*.off-canvas-sidebar .footer {*/
+/*  position: absolute;*/
+/*  bottom: 0;*/
+/*  width: 100%;*/
+/*}*/
 
 @media screen and (min-width: 768px) {
   .footer .copyright {
@@ -16432,7 +16427,7 @@ label {
 }
 
 .off-canvas-sidebar .wrapper-full-page .page-header {
-  padding: 15vh 0 !important;
+  padding: 20vh 0 !important;
 }
 
 .btn.btn-facebook {
@@ -18835,7 +18830,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .off-canvas-sidebar .wrapper-full-page .page-header {
-  padding-bottom: 0px !important;
+  padding-bottom: 30px !important;
 }
 
 @media screen and (max-width: 991px) {

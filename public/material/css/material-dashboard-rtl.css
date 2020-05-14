@@ -8,13 +8,39 @@
  * https://github.com/meysam2fan
  *
  */
+
 @font-face {
-    font-family: IRANYekan;
-    src: url("../fonts/iranyekanweblight.eot?#iefix") format("embedded-opentype"), url("../fonts/iranyekanweblight.woff") format("woff");
+    font-family: 'IRANYekan';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/iranyekanwebbold.eot');
+    src: url('../fonts/iranyekanwebbold.eot?#iefix') format("embedded-opentype"),
+    url('../fonts/iranyekanwebbold.woff') format("woff"),
+    url('../fonts/iranyekanwebbold.ttf') format("truetype")
+}
+
+@font-face {
+    font-family: 'IRANYekan';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/iranyekanwebregular.eot');
+    src: url('../fonts/iranyekanwebregular.eot?#iefix') format("embedded-opentype"),
+    url('../fonts/iranyekanwebregular.woff') format("woff"),
+    url('../fonts/iranyekanwebregular.ttf') format("truetype")
+}
+
+@font-face {
+    font-family: 'IRANYekan';
     font-style: normal;
     font-weight: 300;
+    src: url('../fonts/iranyekanweblight.eot');
+    src: url('../fonts/iranyekanweblight.eot?#iefix') format("embedded-opentype"),
+    url('../fonts/iranyekanweblight.woff') format("woff"),
+    url('../fonts/iranyekanweblight.ttf') format("truetype")
 }
-body,
+body{
+    font-family: 'IRANYekan' !important;
+}
 h1,
 h2,
 h3,
@@ -25,9 +51,8 @@ h6,
 .h2,
 .h3,
 .h4 {
-    font-family: IRANYekan !important;
-    font-weight: 300;
-    line-height: 1.5em;
+    font-family: 'IRANYekan' !important;
+    font-weight:  500;
 }
 html[dir="rtl"] {
   text-align: right;
@@ -1234,3 +1259,408 @@ html[dir="rtl"] .card .card-body, html[dir="rtl"] .card .card-footer {
   }
 }
 /*# sourceMappingURL=material-dashboard-rtl.css.map */
+/*
+My Style:
+BlogPost
+ */
+.header-bg {
+    background: url(../img/BgShape.svg) no-repeat;
+    position: absolute;
+    left: 0;
+    top: -80px;
+    width: 1050px;
+    height: 871px;
+}
+section{
+    padding-bottom: 100px;
+}
+.blog-posts {
+    direction: rtl;
+}
+.blog-posts .blog-posts-bg {
+    background: url(https://hamyar.co/wp-content/themes/Hamyar/assets/public/img/blog-bg.svg) no-repeat;
+    position: absolute;
+    left: -500px;
+    top: -80px;
+    width: 1050px;
+    height: 871px;
+}
+.blog-posts .row > div.first-post a {
+    margin-right: 30px;
+    width: auto;
+}
+.blog-posts .row > div.first-post a {
+    margin-right: 30px;
+}
+.blog-posts .row > div a {
+    position: relative;
+    display: inline-block;
+}
+.blog-posts .row > div a:hover::after {
+    background-color: rgba(52,154,217,0.8);
+    transition: all .5s ease;
+}
+.blog-posts .row > div a::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 15px;
+    transition: all .5s ease;
+}
+.blog-posts .row > div.first-post a .blog-posts-inner {
+    background-color: rgba(255,255,255,0.95);
+    box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    right: -30px;
+    bottom: 35px;
+    padding: 30px;
+    width: 62%;
+}
+.blog-posts .row > div a .blog-posts-inner {
+    position: absolute;
+    z-index: 2;
+    right: 25px;
+    bottom: 40px;
+    width: calc(100% - 50px);
+}
+.blog-posts .row > div.first-post a .blog-posts-inner .category {
+    background-color: transparent;
+    color: #333;
+    padding: 0;
+}
+.blog-posts .row > div.first-post a .blog-posts-inner .category ul {
+    list-style-type: none;
+}
+.blog-posts .row > div.first-post a .blog-posts-inner .category ul::after {
+    clear: both;
+}
+.blog-posts .row > div.first-post a .blog-posts-inner .category ul::before, .blog-posts .row > div.first-post a .blog-posts-inner .category ul::after {
+    content: " ";
+    display: table;
+}
+.blog-posts .row > div.first-post a .blog-posts-inner .category ul li {
+    float: right;
+    margin-left: 15px;
+}
+.blog-posts .row > div.first-post a .blog-posts-inner .category ul li::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #339AD9;
+    float: right;
+    margin-left: 8px;
+    margin-top: 12px;
+}
+.blog-posts .row > div.first-post a .blog-posts-inner h2 {
+    font-size: 22px;
+    line-height: 38px;
+    font-weight: normal;
+    color: #222;
+}
+.blog-posts .row > div.another-posts a:first-of-type {
+    margin-bottom: 30px;
+}
+.blog-posts .row > div.another-posts a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.blog-posts .row > div.another-posts a:hover::after {
+
+    background-color: rgba(52,154,217,0.8);
+    transition: all .5s ease;
+
+}
+.blog-posts .row > div.another-posts a::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 15px;
+    transition: all .5s ease;
+}
+.blog-posts .row > div a img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+.blog-posts .row > div.another-posts a img {
+    max-width: 100%;
+    width: 100%;
+}
+.blog-posts figure img {
+    border-radius: 15px;
+}
+.blog-posts .row > div.another-posts a .blog-posts-inner {
+    position: absolute;
+    z-index: 2;
+    right: 25px;
+    bottom: 40px;
+    width: calc(100% - 50px);
+}
+.blog-posts .row > div.another-posts a .blog-posts-inner .category {
+    display: inline-block;
+    border-radius: 5px;
+}
+.blog-posts .row > div.another-posts a .blog-posts-inner .category ul {
+    list-style-type: none;
+}
+.blog-posts .row > div.another-posts a .blog-posts-inner .category ul li {
+    float: right;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    background: rgba(51,154,217,0.7);
+    border-radius: 5px;
+    display: inline-block;
+    padding: 2px 9px;
+    color: #FFF;
+    font-weight: normal;
+    font-size: 13px;
+    transition: all .5s ease;
+}
+.blog-posts .row > div.another-posts a .blog-posts-inner .category ul li {
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 0 !important;
+    padding: 1px 10px;
+    color: #FFF;
+}
+.blog-posts .row > div.another-posts a .blog-posts-inner h2 {
+    font-size: 17px;
+    color: #FFF;
+    font-weight: normal;
+    line-height: 27px;
+}
+/* End BlogPost */
+/* Course */
+.course .course-inner {
+    border-radius: 15px;
+    box-shadow: 0 0 16px 1px rgba(0,0,0,0.05);
+    transition: all .5s ease;
+    max-height: 430px;
+    height: 430px;
+    overflow: hidden;
+}
+.course .course-inner .header {
+    height: 220px;
+    border-radius: 15px 15px 0 0;
+    transition: all .5s ease;
+    overflow: hidden;
+}
+.course .course-detail {
+    padding: 20px 20px 15px;
+    background-color: #fff;
+    border-radius: 0 0 15px 15px;
+}
+.course .course-detail .course-top-content {
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+    transition: all .5s ease;
+}
+.course .course-detail .course-top-content .title {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 7px;
+}
+.course .course-detail .course-top-content h2 {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: bold;
+    padding: 10px 0 5px;
+}
+
+::before, ::after {
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+element {
+
+}
+.course .course-detail .course-top-content .course-description {
+
+    position: relative;
+    padding-top: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    font-size: 14px;
+    transition: all .5s ease;
+    line-height: 26px;
+
+}
+.course .course-inner:hover {
+    transition: all .5s ease;
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+}
+.catone {
+    background: rgb(239, 87, 105) url("http://tarheiran.ir/melearn/wp-content/themes/mefiweb/css/img/cat-bak.png");
+    background-color: rgb(239, 87, 105);
+    float: right;
+    width: 100%;
+    padding: 40px 0px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+.catone h3 {
+    margin: 0px !important;
+    font-size: 18px;
+    font-weight: 100;
+}
+.catone:hover {
+    background: rgb(161, 161, 161) url("http://tarheiran.ir/melearn/wp-content/themes/mefiweb/css/img/cat-bak.png") !important;
+}
+#home-top-content-footer {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    padding: 0;
+}
+#home-top-content-footer h3 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 50px;
+}
+#home-top-content-footer .row {
+    margin: 0;
+    direction: rtl;
+}
+#home-top-content-footer #line-logo-img-text .line-logo-img {
+    padding-right: 10px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+#home-top-content-footer #line-logo-img-text .text {
+    width: calc(100% - 160px);
+}
+#home-top-content-footer #enemad {
+    margin-top: 10px;
+    text-align: center;
+}
+#home-top-content-footer > .row > div {
+    padding: 0px;
+    margin: 0;
+    margin-top: 0px;
+}
+#home-top-content-footer #enemad img {
+    max-width: 49%;
+    min-width: 95px;
+}
+
+/* footer */
+#footer {
+    background: url(https://hamyar.co/wp-content/themes/Hamyar/assets/public/img/footer-bg.svg) repeat-x left top;
+    height: auto;
+    direction: rtl;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+#footer .main-footer {
+    position: relative;
+}
+#footer .main-footer .main-footer-bg {
+    background: url(../img/footer-inner-bg.svg) no-repeat;
+    width: 1335px;
+    height: 322px;
+    position: absolute;
+    left: 0;
+    z-index: 0;
+}
+#footer .main-footer .main-footer-inner {
+    position: relative;
+    z-index: 99;
+}
+#footer .main-footer .footer-logo {
+    padding-right: 210px;
+    padding-top: 40px;
+    margin-bottom: 30px;
+}
+#footer .main-footer .footer-logo a {
+    display: inline-flex;
+}
+
+#footer .main-footer .footer-logo a .logo-image {
+
+    background: url(https://hamyar.co/wp-content/themes/Hamyar/assets/public/img/footer-logo.png) no-repeat;
+    width: 61px;
+    height: 51px;
+    float: right;
+    margin-left: 10px;
+}
+#footer .main-footer .footer-logo a .logo-details h2 {
+    font-size: 26px;
+    font-weight: normal;
+    color: #FFF;
+    margin-bottom: 5px;
+}
+#footer .main-footer .footer-logo a .logo-details .logo-description {
+    font-size: 15px;
+    font-weight: normal;
+    color: #FFF;
+}
+#footer .main-footer .social {
+    padding-left: 175px;
+}
+#footer .main-footer .social ul {
+    list-style-type: none;
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    margin-bottom: 30px;
+}
+#footer .main-footer .social ul li {
+    float: right;
+    margin-left: 20px;
+}
+#footer .main-footer .footer-links ul {
+    list-style-type: none;
+}
+#footer .main-footer .footer-links ul li {
+    float: right;
+    margin-left: 15px;
+}
+#footer .main-footer .footer-links ul li a {
+    color: #FFF;
+    font-size: 14px;
+}
+#footer .main-footer hr {
+    border-color: rgba(255,255,255,0.3);
+    width: 70%;
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#footer .main-footer hr::before, #footer .main-footer hr::after {
+
+    content: " ";
+    display: table;
+
+}
+#footer .main-footer hr::after {
+    clear: both;
+}
+#footer .main-footer hr::before, #footer .main-footer hr::after {
+    content: " ";
+    display: table;
+}
+#footer .main-footer .address {
+    clear: both;
+}
+#footer .main-footer .address p {
+    color: #FFF;
+    font-size: 14px;
+    margin-bottom: 0;
+}

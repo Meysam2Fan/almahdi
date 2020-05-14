@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1336px" height="323px" viewBox="0 0 1336 323" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Desktop HD</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="79.7422012%" y1="90.1459255%" x2="50%" y2="28.0503519%" id="linearGradient-1">
+            <stop stop-color="#11998E" offset="0%"/>
+            <stop stop-color="#38EF7D" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="Desktop-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M939.064358,-360.274776 C902.536602,-243.464472 555.380406,820.585378 526.417965,909.720233 C531.530878,708.1618 400.536994,645.276514 431.849106,548.90774 C463.161219,452.538967 500.799767,481.690442 529.745968,392.603195 C558.692169,303.515948 402.276057,252.936712 472.809502,34.7439833 C535.369425,-157.795661 706.516305,-86.4500405 939.064358,-360.274776 Z" id="Rectangle-12" fill="url(#linearGradient-1)" transform="translate(683.035716, 274.722729) scale(-1, 1) rotate(72.000000) translate(-683.035716, -274.722729) "/>
+    </g>
+</svg>
