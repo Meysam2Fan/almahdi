@@ -13153,7 +13153,9 @@ fieldset[disabled] .form-group .form-control {
   font-weight: 300;
   margin-left: 1rem;
 }
-
+.navbar .navbar-brand span:last-child{
+    display: none;
+}
 .navbar>.container {
   flex: 1;
 }
@@ -18273,6 +18275,17 @@ Copyright (c) 2015 Daniel Eden
     transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     left: 0;
   }
+    .navbar .navbar-brand img{
+        display: none;
+    }
+    .navbar .navbar-brand span{
+        display: none;
+    }
+    .navbar .navbar-brand span:last-child{
+        display: block;
+    }
+
+
   .off-canvas-sidebar .navbar .container {
     transform: none;
   }

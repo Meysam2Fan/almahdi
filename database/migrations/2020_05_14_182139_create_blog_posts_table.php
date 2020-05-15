@@ -20,6 +20,8 @@ class CreateBlogPostsTable extends Migration
             $table->integer('author_id');
             $table->integer('category_id');
             $table->string('img_url');
+            $table->tinyInteger('type');
+            $table->tinyInteger('active');
             $table->timestamp('pub_date')->useCurrent();
         });
     }

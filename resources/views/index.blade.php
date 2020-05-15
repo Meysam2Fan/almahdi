@@ -1,27 +1,8 @@
 @extends('layouts.landing', ['class' => 'off-canvas-sidebar', 'activePage' => 'home', 'title' => __('s.title')])
 
 @section('content')
-
-    <header class="header">
-        <div class="header-bg"></div>
-        <div class="page-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-8 pt-lg-5">
-                        <h3 >{{ __('s.text_header1') }}</h3>
-                        <h1 >{{ __('s.text_header2') }}</h1>
-                        <h6 >{{ __('s.text_header3') }}</h6>
-                        <a class="btn btn-success text-white" id="btn-form-register">{{ __('s.pre_register') }}</a>
-                    </div>
-                    <div class="col-lg-6 col-md-8">
-                        <img class="img-fluid" src="{{ asset('material') }}/img/hero-bg.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
 <div class="container" style="height: auto;">
-    <section class="blog-posts">
+    <section id="blog_posts" class="blog-posts">
         <div class="row">
             <div class="col-lg-5 col-md-8">
                 <h3>{{__('s.section_title1')}}</h3>
@@ -49,12 +30,11 @@
         </div>
         <hr class="pb-3">
         <div class="row">
-            <div class="blog-posts-bg2"></div>
             <?php $index_post = 0; ?>
             @foreach ($postsData as $post)
                 <?php $index_post++ ?>
                 @if($index_post==1)
-                    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-7 first-post">
+                    <div class="col-lg-8 col-md-12 first-post">
                         <a href="">
                             <figure>
                                 <img src="{{ asset('upload') }}{{$post->img_url}}" class="attachment-home-blog-first-post size-home-blog-first-post wp-post-image litespeed-loaded" alt="{{$post->title}}" width="720" height="508">
@@ -70,7 +50,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-md-3 col-sm-12 col-xs-5 another-posts">
+                    <div class="col-lg-4 col-md-12 another-posts">
                 @else
                     <a href="">
                         <figure>
@@ -91,146 +71,132 @@
                     </div>
         </div>
     </section>
-    <section class="courses">
+    <div class="service-bg"></div>
+    <section id="courses" class="courses">
         <div class="row">
             <div class="col-lg-5 col-md-8">
-                <h3>{{__('s.section_title1')}}</h3>
-                <sub class="text-muted">{{__('s.section_desc1')}}</sub>
-            </div>
-            <div class="col-lg-7 col-md-8">
-                {{--                <ul class="nav nav-tabs  mt-4">--}}
-                {{--                    <li class="nav-item p-2 active">--}}
-                {{--                        <a href="#" class="btn btn-outline">{{__('s.arak')}}</a>--}}
-                {{--                    </li>--}}
-                {{--                    <li class="nav-item p-2">--}}
-                {{--                        <a href="#" class="btn btn-outline">{{__('s.khomein')}}</a>--}}
-                {{--                    </li>--}}
-                {{--                    <li class="nav-item p-2">--}}
-                {{--                        <a href="#" class="btn btn-outline">{{__('s.saave')}}</a>--}}
-                {{--                    </li>--}}
-                {{--                    <li class="nav-item p-2">--}}
-                {{--                        <a href="#" class="btn btn-outline">{{__('s.mahalat')}}</a>--}}
-                {{--                    </li>--}}
-                {{--                    <li class="nav-item p-2">--}}
-                {{--                        <a href="#" class="btn btn-outline">{{__('s.mohajeran')}}</a>--}}
-                {{--                    </li>--}}
-                {{--                </ul>--}}
+                <h3>{{__('s.section_title2')}}</h3>
+                <sub class="text-muted">{{__('s.section_desc2')}}</sub>
             </div>
         </div>
         <hr class="pb-3">
         <div class="row">
-            <article class="col-md-4 col-sm-6 col-xs-12 course"><div class="course-inner"><div class="header">
-                        <a href="https://hamyar.co/course/smartwebmasters/"><figure>
-                                <img data-lazyloaded="1" src="https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-360x225.png" data-src="https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-360x225.png" class="attachment-home-product size-home-product litespeed-loaded" alt="وبمستران هوشمند" data-srcset="https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-360x225.png 360w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-300x188.png 300w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-400x250.png 400w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-350x220.png 350w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-600x375.png 600w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-200x125.png 200w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo.png 720w" data-sizes="(max-width: 360px) 100vw, 360px" sizes="(max-width: 360px) 100vw, 360px" srcset="https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-360x225.png 360w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-300x188.png 300w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-400x250.png 400w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-350x220.png 350w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-600x375.png 600w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-200x125.png 200w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo.png 720w" data-was-processed="true" width="360" height="225"><noscript><img width="360" height="225" src="https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-360x225.png" class="attachment-home-product size-home-product" alt="وبمستران هوشمند" srcset="https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-360x225.png 360w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-300x188.png 300w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-400x250.png 400w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-350x220.png 350w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-600x375.png 600w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-200x125.png 200w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo.png 720w" sizes="(max-width: 360px) 100vw, 360px" /></noscript></figure></a></div><div class="course-detail"><div class="course-top-content">
-                            <a href="https://hamyar.co/course/smartwebmasters/" class="title"><h2>۰ تا ۱۰۰ آموزش کسب و کار اینترنتی ، دوره جامع وبمستران هوشمند 17</h2></a><div class="course-description">
-                                آموزش جامع ۰ تا ۱۰۰ ساخت و مدیریت کسب و کار اینترنتی، اصول بازاریابی و رساندن سایت و کسب و کار شما به درآمد میلیونی. با تدریس مدیران برتر کسب و کار آنلاین و دیجیتال مارکتنیگ در ایران</div></div></div></div></article><article class="col-md-4 col-sm-6 col-xs-12 course"><div class="course-inner"><div class="header">
-                        <a href="https://hamyar.co/course/webdesign/"><figure>
-                                <img data-lazyloaded="1" src="https://hamyar.co/wp-content/uploads/2017/09/shop-1-360x225.png" data-src="https://hamyar.co/wp-content/uploads/2017/09/shop-1-360x225.png" class="attachment-home-product size-home-product litespeed-loaded" alt="" data-srcset="https://hamyar.co/wp-content/uploads/2017/09/shop-1-360x225.png 360w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-300x188.png 300w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-400x250.png 400w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-350x220.png 350w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-600x375.png 600w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-200x125.png 200w, https://hamyar.co/wp-content/uploads/2017/09/shop-1.png 720w" data-sizes="(max-width: 360px) 100vw, 360px" sizes="(max-width: 360px) 100vw, 360px" srcset="https://hamyar.co/wp-content/uploads/2017/09/shop-1-360x225.png 360w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-300x188.png 300w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-400x250.png 400w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-350x220.png 350w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-600x375.png 600w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-200x125.png 200w, https://hamyar.co/wp-content/uploads/2017/09/shop-1.png 720w" data-was-processed="true" width="360" height="225"><noscript><img width="360" height="225" src="https://hamyar.co/wp-content/uploads/2017/09/shop-1-360x225.png" class="attachment-home-product size-home-product" alt="" srcset="https://hamyar.co/wp-content/uploads/2017/09/shop-1-360x225.png 360w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-300x188.png 300w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-400x250.png 400w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-350x220.png 350w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-600x375.png 600w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-200x125.png 200w, https://hamyar.co/wp-content/uploads/2017/09/shop-1.png 720w" sizes="(max-width: 360px) 100vw, 360px" /></noscript></figure></a></div><div class="course-detail"><div class="course-top-content">
-                            <a href="https://hamyar.co/course/webdesign/" class="title"><h2>دوره ۰ تا ۱۰۰ آموزش طراحی سایت و فروشگاه اینترنتی</h2></a><div class="course-description">
-                                آموزش ایجاد طرح گرافیکی (ui) سایت در فتوشاپ، تبدیل طرح گرافیکی به قالب وردپرسی و ووکامرسی</div></div></div></div></article><article class="col-md-4 col-sm-6 col-xs-12 course"><div class="course-inner"><div class="header">
-                        <a href="https://hamyar.co/course/instagram/"><figure>
-                                <img data-lazyloaded="1" src="https://hamyar.co/wp-content/uploads/2017/06/insta-1-360x225.png" data-src="https://hamyar.co/wp-content/uploads/2017/06/insta-1-360x225.png" class="attachment-home-product size-home-product litespeed-loaded" alt="" data-srcset="https://hamyar.co/wp-content/uploads/2017/06/insta-1-360x225.png 360w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-300x188.png 300w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-400x250.png 400w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-350x220.png 350w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-600x375.png 600w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-200x125.png 200w, https://hamyar.co/wp-content/uploads/2017/06/insta-1.png 720w" data-sizes="(max-width: 360px) 100vw, 360px" sizes="(max-width: 360px) 100vw, 360px" srcset="https://hamyar.co/wp-content/uploads/2017/06/insta-1-360x225.png 360w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-300x188.png 300w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-400x250.png 400w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-350x220.png 350w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-600x375.png 600w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-200x125.png 200w, https://hamyar.co/wp-content/uploads/2017/06/insta-1.png 720w" data-was-processed="true" width="360" height="225"><noscript><img width="360" height="225" src="https://hamyar.co/wp-content/uploads/2017/06/insta-1-360x225.png" class="attachment-home-product size-home-product" alt="" srcset="https://hamyar.co/wp-content/uploads/2017/06/insta-1-360x225.png 360w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-300x188.png 300w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-400x250.png 400w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-350x220.png 350w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-600x375.png 600w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-200x125.png 200w, https://hamyar.co/wp-content/uploads/2017/06/insta-1.png 720w" sizes="(max-width: 360px) 100vw, 360px" /></noscript></figure></a></div><div class="course-detail"><div class="course-top-content">
-                            <a href="https://hamyar.co/course/instagram/" class="title"><h2>دوره‌ی آموزش اینستاگرام | کسب درآمد از اینستاگرام</h2></a><div class="course-description">
-                                تجریبات ساخت اکانت‌های بالاتر از 100k و درآمدزایی میلیونی از اینستاگرام توسط استاد حاجی محمدی در دوره آموزش Instagram و کسب درآمد از آن</div></div></div></div></article>
+            @foreach ($coursesData as $course)
+                <div class="col-sm-12 col-md-6 col-xl-4 course">
+                    <div class="course-inner">
+                        <header style="background: url({{ asset('upload/images') }}/{{$course->img_url}}) center no-repeat;">
+                            <div class="course-item-sale">
+                                <div class="sale-perc-badge"><div class="sale-perc">دانلود </div><div class="sale-badge-text">رایگان</div></div>                                            </div>
+                            <a href="">
+                                <svg class="venus-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                                    <defs>
+                                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+                                    </defs>
+                                    <g class="parallax">
+                                        <use xlink:href="#gentle-wave" x="-12" y="11" fill="rgba(255,255,255,0.7"></use>
+                                        <use xlink:href="#gentle-wave" x="25" y="13" fill="rgba(255,255,255,0.5)"></use>
+                                        <use xlink:href="#gentle-wave" x="100" y="5" fill="rgba(255,255,255,0.3)"></use>
+                                        <use xlink:href="#gentle-wave" x="90" y="7" fill="#fff"></use>
+                                    </g>
+                                </svg>
+                            </a>
+                        </header>
+                        <div class="course-detail">
+                            <div class="course-top-content">
+                                <a href="" class="title">
+                                    <h2>{{$course->title}}</h2>
+                                </a>
+                                <div class="course-description">توسط:
+                                    <br>
+                                    {{$course->author_id === 4 ? "صالح کمره ئی" : "میثم افشارزاده"}}
+                                </div>
+                            </div>
+                            <div class="course-information position-relative d-flex">
+                                <div class="col p-0 text-right">
+                                    <br>
+                                    <span class="level-course">0 <i class="fa fa-user"></i></span>
+                                </div>
+                                <div class="col p-0 text-left">
+                                    <span class="level-course">دسته</span>
+                                    <span class="name-level-course">
+                                    {{$course->category_id === 101 ? "فیلم" : "کتاب"}}
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            @endforeach
             </div>
         <div class="row pt-4">
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6 pb-3">
                 <a href="#">
                     <div class="catone" style="background-color: rgb(46, 153, 186);">
-                        <h3>آموزش های ایرانی</h3>
+                        <h3>نمونه سوالات ابتدایی</h3>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6 pb-3">
                 <a href="#">
                     <div class="catone" style="background-color: rgb(8, 170, 66);">
-                        <h3>آموزش های ایرانی</h3>
+                        <h3>نمونه سوالات دوره اول متوسه</h3>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6 pb-3">
                 <a href="#">
                     <div class="catone" style="background-color: rgb(240, 141, 16);">
-                        <h3>آموزش های ایرانی</h3>
+                        <h3>نمونه سوالات دوره دوم متوسطه</h3>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6 pb-3">
                 <a href="#">
                     <div class="catone">
-                        <h3>آموزش های ایرانی</h3>
+                        <h3>وبینار آموزشی</h3>
                     </div>
                 </a>
             </div>
         </div>
     </section>
-    <section class="courses">
+    <section id="service" class="service">
         <div class="row">
             <div class="col-lg-5 col-md-8">
-                <h3>{{__('s.section_title1')}}</h3>
-                <sub class="text-muted">{{__('s.section_desc1')}}</sub>
-            </div>
-            <div class="col-lg-7 col-md-8">
-                {{--                <ul class="nav nav-tabs  mt-4">--}}
-                {{--                    <li class="nav-item p-2 active">--}}
-                {{--                        <a href="#" class="btn btn-outline">{{__('s.arak')}}</a>--}}
-                {{--                    </li>--}}
-                {{--                    <li class="nav-item p-2">--}}
-                {{--                        <a href="#" class="btn btn-outline">{{__('s.khomein')}}</a>--}}
-                {{--                    </li>--}}
-                {{--                    <li class="nav-item p-2">--}}
-                {{--                        <a href="#" class="btn btn-outline">{{__('s.saave')}}</a>--}}
-                {{--                    </li>--}}
-                {{--                    <li class="nav-item p-2">--}}
-                {{--                        <a href="#" class="btn btn-outline">{{__('s.mahalat')}}</a>--}}
-                {{--                    </li>--}}
-                {{--                    <li class="nav-item p-2">--}}
-                {{--                        <a href="#" class="btn btn-outline">{{__('s.mohajeran')}}</a>--}}
-                {{--                    </li>--}}
-                {{--                </ul>--}}
+                <h3>{{__('s.section_title3')}}</h3>
+                <sub class="text-muted">{{__('s.section_desc3')}}</sub>
             </div>
         </div>
         <hr class="pb-3">
         <div class="row">
-            <article class="col-md-4 col-sm-6 col-xs-12 course"><div class="course-inner"><div class="header">
-                        <a href="https://hamyar.co/course/smartwebmasters/"><figure>
-                                <img data-lazyloaded="1" src="https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-360x225.png" data-src="https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-360x225.png" class="attachment-home-product size-home-product litespeed-loaded" alt="وبمستران هوشمند" data-srcset="https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-360x225.png 360w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-300x188.png 300w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-400x250.png 400w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-350x220.png 350w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-600x375.png 600w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-200x125.png 200w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo.png 720w" data-sizes="(max-width: 360px) 100vw, 360px" sizes="(max-width: 360px) 100vw, 360px" srcset="https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-360x225.png 360w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-300x188.png 300w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-400x250.png 400w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-350x220.png 350w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-600x375.png 600w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-200x125.png 200w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo.png 720w" data-was-processed="true" width="360" height="225"><noscript><img width="360" height="225" src="https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-360x225.png" class="attachment-home-product size-home-product" alt="وبمستران هوشمند" srcset="https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-360x225.png 360w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-300x188.png 300w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-400x250.png 400w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-350x220.png 350w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-600x375.png 600w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo-200x125.png 200w, https://hamyar.co/wp-content/uploads/2018/09/Smartwebmasters_logo.png 720w" sizes="(max-width: 360px) 100vw, 360px" /></noscript></figure></a></div><div class="course-detail"><div class="course-top-content">
-                            <a href="https://hamyar.co/course/smartwebmasters/" class="title"><h2>۰ تا ۱۰۰ آموزش کسب و کار اینترنتی ، دوره جامع وبمستران هوشمند 17</h2></a><div class="course-description">
-                                آموزش جامع ۰ تا ۱۰۰ ساخت و مدیریت کسب و کار اینترنتی، اصول بازاریابی و رساندن سایت و کسب و کار شما به درآمد میلیونی. با تدریس مدیران برتر کسب و کار آنلاین و دیجیتال مارکتنیگ در ایران</div></div></div></div></article><article class="col-md-4 col-sm-6 col-xs-12 course"><div class="course-inner"><div class="header">
-                        <a href="https://hamyar.co/course/webdesign/"><figure>
-                                <img data-lazyloaded="1" src="https://hamyar.co/wp-content/uploads/2017/09/shop-1-360x225.png" data-src="https://hamyar.co/wp-content/uploads/2017/09/shop-1-360x225.png" class="attachment-home-product size-home-product litespeed-loaded" alt="" data-srcset="https://hamyar.co/wp-content/uploads/2017/09/shop-1-360x225.png 360w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-300x188.png 300w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-400x250.png 400w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-350x220.png 350w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-600x375.png 600w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-200x125.png 200w, https://hamyar.co/wp-content/uploads/2017/09/shop-1.png 720w" data-sizes="(max-width: 360px) 100vw, 360px" sizes="(max-width: 360px) 100vw, 360px" srcset="https://hamyar.co/wp-content/uploads/2017/09/shop-1-360x225.png 360w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-300x188.png 300w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-400x250.png 400w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-350x220.png 350w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-600x375.png 600w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-200x125.png 200w, https://hamyar.co/wp-content/uploads/2017/09/shop-1.png 720w" data-was-processed="true" width="360" height="225"><noscript><img width="360" height="225" src="https://hamyar.co/wp-content/uploads/2017/09/shop-1-360x225.png" class="attachment-home-product size-home-product" alt="" srcset="https://hamyar.co/wp-content/uploads/2017/09/shop-1-360x225.png 360w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-300x188.png 300w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-400x250.png 400w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-350x220.png 350w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-600x375.png 600w, https://hamyar.co/wp-content/uploads/2017/09/shop-1-200x125.png 200w, https://hamyar.co/wp-content/uploads/2017/09/shop-1.png 720w" sizes="(max-width: 360px) 100vw, 360px" /></noscript></figure></a></div><div class="course-detail"><div class="course-top-content">
-                            <a href="https://hamyar.co/course/webdesign/" class="title"><h2>دوره ۰ تا ۱۰۰ آموزش طراحی سایت و فروشگاه اینترنتی</h2></a><div class="course-description">
-                                آموزش ایجاد طرح گرافیکی (ui) سایت در فتوشاپ، تبدیل طرح گرافیکی به قالب وردپرسی و ووکامرسی</div></div></div></div></article><article class="col-md-4 col-sm-6 col-xs-12 course"><div class="course-inner"><div class="header">
-                        <a href="https://hamyar.co/course/instagram/"><figure>
-                                <img data-lazyloaded="1" src="https://hamyar.co/wp-content/uploads/2017/06/insta-1-360x225.png" data-src="https://hamyar.co/wp-content/uploads/2017/06/insta-1-360x225.png" class="attachment-home-product size-home-product litespeed-loaded" alt="" data-srcset="https://hamyar.co/wp-content/uploads/2017/06/insta-1-360x225.png 360w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-300x188.png 300w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-400x250.png 400w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-350x220.png 350w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-600x375.png 600w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-200x125.png 200w, https://hamyar.co/wp-content/uploads/2017/06/insta-1.png 720w" data-sizes="(max-width: 360px) 100vw, 360px" sizes="(max-width: 360px) 100vw, 360px" srcset="https://hamyar.co/wp-content/uploads/2017/06/insta-1-360x225.png 360w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-300x188.png 300w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-400x250.png 400w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-350x220.png 350w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-600x375.png 600w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-200x125.png 200w, https://hamyar.co/wp-content/uploads/2017/06/insta-1.png 720w" data-was-processed="true" width="360" height="225"><noscript><img width="360" height="225" src="https://hamyar.co/wp-content/uploads/2017/06/insta-1-360x225.png" class="attachment-home-product size-home-product" alt="" srcset="https://hamyar.co/wp-content/uploads/2017/06/insta-1-360x225.png 360w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-300x188.png 300w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-400x250.png 400w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-350x220.png 350w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-600x375.png 600w, https://hamyar.co/wp-content/uploads/2017/06/insta-1-200x125.png 200w, https://hamyar.co/wp-content/uploads/2017/06/insta-1.png 720w" sizes="(max-width: 360px) 100vw, 360px" /></noscript></figure></a></div><div class="course-detail"><div class="course-top-content">
-                            <a href="https://hamyar.co/course/instagram/" class="title"><h2>دوره‌ی آموزش اینستاگرام | کسب درآمد از اینستاگرام</h2></a><div class="course-description">
-                                تجریبات ساخت اکانت‌های بالاتر از 100k و درآمدزایی میلیونی از اینستاگرام توسط استاد حاجی محمدی در دوره آموزش Instagram و کسب درآمد از آن</div></div></div></div></article>
+            @foreach ($servicesData as $service)
+                <article class="col-lg-4 col-md-4 col-sm-6 pb-3 service">
+                    <div class="service-inner">
+                        <div class="header">
+                            <a href="">
+                                <img src="{{ asset('upload/images') }}/{{$service->img_url}}" alt="{{$service->title}}"/>
+                            </a>
+                        </div>
+                        <div class="service-detail">
+                            <div class="service-top-content">
+                                <a href="" class="title">
+                                    <h3>{{$service->title}}</h3>
+                                </a>
+                                <div class="service-description">
+                                    <li>{{$service->content}}</li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            @endforeach
         </div>
     </section>
-    <section class="form-register bg-light p-4" id="form-register">
+    <section id="form-register" class="form-register bg-light p-4" >
         <div class="row">
             <div class="col-lg-5 col-md-8">
-                <h3>{{__('s.section_title1')}}</h3>
-                <sub class="text-muted">{{__('s.section_desc1')}}</sub>
-            </div>
-            <div class="col-lg-7 col-md-8">
-                {{--                <ul class="nav nav-tabs  mt-4">--}}
-                {{--                    <li class="nav-item p-2 active">--}}
-                {{--                        <a href="#" class="btn btn-outline">{{__('s.arak')}}</a>--}}
-                {{--                    </li>--}}
-                {{--                    <li class="nav-item p-2">--}}
-                {{--                        <a href="#" class="btn btn-outline">{{__('s.khomein')}}</a>--}}
-                {{--                    </li>--}}
-                {{--                    <li class="nav-item p-2">--}}
-                {{--                        <a href="#" class="btn btn-outline">{{__('s.saave')}}</a>--}}
-                {{--                    </li>--}}
-                {{--                    <li class="nav-item p-2">--}}
-                {{--                        <a href="#" class="btn btn-outline">{{__('s.mahalat')}}</a>--}}
-                {{--                    </li>--}}
-                {{--                    <li class="nav-item p-2">--}}
-                {{--                        <a href="#" class="btn btn-outline">{{__('s.mohajeran')}}</a>--}}
-                {{--                    </li>--}}
-                {{--                </ul>--}}
+                <h3>{{__('s.section_title4')}}</h3>
+                <sub class="text-muted">{{__('s.section_desc4')}}</sub>
             </div>
         </div>
         <hr class="pb-3">
@@ -270,15 +236,28 @@
                     <textarea class="form-control" name="description" id="description" placeholder="توضیحات بیشتر" required="false" aria-required="false"></textarea>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">ثبت نام</button>
+            <button type="submit" class="btn btn-success">ثبت نام</button>
         </div>
     </section>
     <section class="container text-right" id="home-top-content-footer">
-        <div class="row"><h3>
-                همیار‌آکادمی، کارخانه‌ی تبدیل علاقه‌مند به متخصص</h3><div class="col-md-10 col-xs-12"><div class="row" id="line-logo-img-text"><div class="pull-right line-logo-img">
-                        <img data-lazyloaded="1" src="https://hamyar.co/wp-content/themes/Hamyar/assets/public/img/method-draw-image.svg" data-src="https://hamyar.co/wp-content/themes/Hamyar/assets/public/img/method-draw-image.svg" alt="" class="litespeed-loaded" data-was-processed="true" width="120"><noscript><img width="120"  src="https://hamyar.co/wp-content/themes/Hamyar/assets/public/img/method-draw-image.svg" alt=""></noscript></div><div class="pull-right text"><p>موسسه‌ی آموزشی همیار آکادمی از سال ۱۳۹۰ فعالیت خود را در زمینه‌ی آموزش تخصصی راه‌اندازی کسب‌و‌کار اینترنتی و علوم مدرن مانندزبان‌های برنامه‌نویسی تحت وب و تخصص‌هایی همچون گرافیک و وردپرس، با هدف تبدیل علاقه‌مندان به متخصصین آماده ورود به بازار کار به در قالب کارآفرین (دارای کسب‌وکار شخصی) یا فردی که میتواند موثرتر در تیمی یا شرکتی فعالیت نماید، آغاز کرد. اگر علاقه‌مند به حوزه‌ای هستید یا حس میکنید در حوزه‌ای استعداد دارید با یادگیری‌های اصولی باید آن علاقه را به تخصص تبدیل نمائید. دانشجویان همیارآکادمی، باتوجه به علاقه‌ی خود، و سرمایه‌گذاری برروی خودشان، متخصص شده‌اند و توانسته‌اند از آن حوزه، با کمک اینترنت کسب درآمد کنند، به همین دلیل همیارآکادمی به “کارخانه تبدیل علاقه‌مند به متخصص” نام گرفت.</p></div></div></div><div class="col-md-2 col-xs-12" id="enemad">
-                <img data-lazyloaded="1" src="https://hamyar.co/wp-content/uploads/2020/04/enamad.png" style="cursor:pointer" class="litespeed-loaded" >
-                <img src="https://hamyar.co/wp-content/uploads/2020/04/samandehi.png" style="cursor:pointer" class="litespeed-loading" ></div></div>
+        <div class="row">
+            <h3>مؤسسه آموزشی ناصران امام مهدی (عج) استان مرکزی</h3>
+            <div class="col-md-12 col-xs-12">
+                <div class="row" id="line-logo-img-text">
+                    <div class="pull-right line-logo-img">
+                        <img src="{{ asset('material') }}/img/logo@2x.png" class="litespeed-loaded" width="100"/>
+                    </div>
+                    <div class="pull-right text">
+                        <p>
+                مؤسسه کاملا مردمی ، غیر سیاسی و غیر انتفاعی و عام المنفعه بوده و هیچ شخصی اعم از حقوقی و یا حقیقی در آن سهمی نداشته. این مدرسه با اهداف آموزش صحیح و باکیفیت ایجاد شده است. این مؤسسه تنها مؤسسه فعال در استان مرکزی بوده است. این پرتال که توسط تعدادی از نخبگان استانی طراحی شده است دارای امکاناتی چون نمایش اخبار مدارس، دریافت محتواهای آموزشی و علمی که توسط معلمین و مدیران ثبت می گردد، برگزاری کلاس ها و وبینارهای آنلاین و همچنین سیستم مکاتبات اداری الکترونیکی نیز می باشد. از بخش زیر وارد پنل مدیریتی سیستم شوید.
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <a class="btn btn-outline-success" href="{{ route('login') }}">ورود به سامانه هوشمند</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
 <script>
@@ -287,8 +266,15 @@
             var position = $("#form-register").offset().top;
             $("HTML, BODY").animate({
                 scrollTop: position -60
-            }, 2000);
+            }, 1500);
+        });
+        $(".navbar-nav li a").on('click', function() {
+            var position = $("#"+$(this).data('link')).offset().top;
+            $("HTML, BODY").animate({
+                scrollTop: position -40
+            }, 1000);
         });
     });
+
 </script>
 @endsection

@@ -11,8 +11,9 @@ class PagesController extends Controller
 
         // Read value from Model method
         $postsData = Blog_Post::getpostsData();
-
+        $coursesData = Blog_Post::getcoursesData();
+        $servicesData = Blog_Post::getservicesData();
         // Pass to view
-        return view('index')->with("postsData",$postsData);
+        return view('index',['postsData'=> $postsData,'coursesData'=>$coursesData, 'servicesData' => $servicesData]);
     }
 }
